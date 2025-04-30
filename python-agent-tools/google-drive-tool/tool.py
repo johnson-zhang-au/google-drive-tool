@@ -120,7 +120,8 @@ class GoogleDriveTool(BaseAgentTool):
         Returns:
             Dictionary containing the search results.
         """
-        logger.debug("Starting 'search_files' action.")
+        logger.info("Starting 'search_files' action.")
+        logger.debug(f"Input arguments: {args}")
         if "query" not in args:
             logger.error("Missing required field: query")
             raise ValueError("Missing required field: query")
@@ -155,8 +156,8 @@ class GoogleDriveTool(BaseAgentTool):
         Returns:
             Dictionary containing the list of files.
         """
-        logger.debug("Starting 'list_files' action.")
-        
+        logger.info("Starting 'list_files' action.")
+        logger.debug(f"Input arguments: {args}")
         try:
             # Get the folder ID if provided
             folder_id = args.get("folder_id")
@@ -187,7 +188,8 @@ class GoogleDriveTool(BaseAgentTool):
         Returns:
             Dictionary containing the file details.
         """
-        logger.debug("Starting 'get_file_details' action.")
+        logger.info("Starting 'get_file_details' action.")
+        logger.debug(f"Input arguments: {args}")
         if "file_id" not in args:
             logger.error("Missing required field: file_id")
             raise ValueError("Missing required field: file_id")
@@ -219,7 +221,8 @@ class GoogleDriveTool(BaseAgentTool):
         Returns:
             Dictionary containing the file content and metadata.
         """
-        logger.debug("Starting 'get_file_content' action.")
+        logger.info("Starting 'get_file_content' action.")
+        logger.debug(f"Input arguments: {args}")
         if "file_id" not in args:
             logger.error("Missing required field: file_id")
             raise ValueError("Missing required field: file_id")
@@ -254,7 +257,8 @@ class GoogleDriveTool(BaseAgentTool):
         Returns:
             Dictionary containing the file content and metadata.
         """
-        logger.debug("Starting 'download_file' action.")
+        logger.info("Starting 'download_file' action.")
+        logger.debug(f"Input arguments: {args}")
         if "file_id" not in args:
             logger.error("Missing required field: file_id")
             raise ValueError("Missing required field: file_id")
@@ -289,7 +293,8 @@ class GoogleDriveTool(BaseAgentTool):
         Returns:
             Dictionary containing the uploaded file ID.
         """
-        logger.debug("Starting 'upload_file' action.")
+        logger.info("Starting 'upload_file' action.")
+        logger.debug(f"Input arguments: {args}")
         if "file_path" not in args:
             logger.error("Missing required field: file_path")
             raise ValueError("Missing required field: file_path")
@@ -322,7 +327,8 @@ class GoogleDriveTool(BaseAgentTool):
         Returns:
             Dictionary containing the result of the operation.
         """
-        logger.debug("Starting 'delete_file' action.")
+        logger.info("Starting 'delete_file' action.")
+        logger.debug(f"Input arguments: {args}")
         if "file_id" not in args:
             logger.error("Missing required field: file_id")
             raise ValueError("Missing required field: file_id")

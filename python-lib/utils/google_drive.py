@@ -48,14 +48,10 @@ class GoogleDriveUtils:
             A list of files matching the query.
         """
         try:
-            # Format the search query
-            escaped_query = query.replace("'", "\\'")
-            formatted_query = f"fullText contains '{escaped_query}'"
-            
-            # Execute the search
-            logger.debug(f"Executing search with query: {formatted_query}, page_size: {page_size}")
+            # Execute the search with the original query
+            logger.debug(f"Executing search with query: {query}, page_size: {page_size}")
             results = drive_service.files().list(
-                q=formatted_query,
+                q=query,
                 pageSize=page_size,
                 fields="files(id, name, mimeType, modifiedTime, size)"
             ).execute()
