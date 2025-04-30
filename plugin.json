@@ -10,10 +10,10 @@
 
         "author": "johnson.zhang",
 
-        "icon": "fas fa-puzzle-piece",
+        "icon": "fab fa-google-drive",
 
         "tags": ["Google Drive", "File Management", "Agent Tool"],
-        
+
         "url": "",
 
         "licenseInfo": "Apache Software License"

@@ -1,7 +1,7 @@
 {
     "id": "google-drive-tool",
     "meta": {
-        "icon": "fas fa-file",
+        "icon": "fab fa-google-drive",
         "label": "Google Drive Tool",
         "description": "Interact with Google Drive to search for files, get file details, and download files"
     },
