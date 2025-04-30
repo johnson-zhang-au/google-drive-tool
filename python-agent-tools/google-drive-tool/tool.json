@@ -1,0 +1,46 @@
+{
+    "id": "google-drive-tool",
+    "meta": {
+        "icon": "fas fa-file",
+        "label": "Google Drive Tool",
+        "description": "Interact with Google Drive to search for files, get file details, and download files"
+    },
+    "params": [
+        {
+            "name": "google_drive_auth",
+            "label": "Google Drive Authentication",
+            "type": "PRESET",
+            "parameterSetId": "google-drive-auth"
+        },
+        {
+            "name": "logging_level",
+            "label": "Logging Level",
+            "type": "SELECT",
+            "description": "The level of logging that the tool generates",
+            "mandatory": true,
+            "selectChoices": [
+                {
+                    "value": "DEBUG",
+                    "label": "DEBUG"
+                },
+                {
+                    "value": "INFO",
+                    "label": "INFO"
+                },
+                {
+                    "value": "WARNING",
+                    "label": "WARNING"
+                },
+                {
+                    "value": "ERROR",
+                    "label": "ERROR"
+                },
+                {
+                    "value": "CRITICAL",
+                    "label": "CRITICAL"
+                }
+            ],
+            "defaultValue": "INFO"
+        }
+    ]
+} 
