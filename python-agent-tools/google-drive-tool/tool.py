@@ -1,6 +1,6 @@
 # This file is the implementation of Google Drive agent tool
 from dataiku.llm.agent_tools import BaseAgentTool
-from utils.logging import logger, set_level
+from utils.logging import logger
 from utils.google_drive import GoogleDriveUtils
 import json
 
@@ -23,7 +23,7 @@ class GoogleDriveTool(BaseAgentTool):
         logging_level = self.config.get("logging_level", "INFO")
         
         # Set the logging level
-        set_level(logging_level)
+        logger.set_level(logging_level)
 
     def initialize_drive_service(self):
         """
