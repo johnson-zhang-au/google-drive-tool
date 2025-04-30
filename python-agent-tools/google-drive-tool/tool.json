@@ -41,6 +41,14 @@
                 }
             ],
             "defaultValue": "INFO"
+        },
+        {
+            "name": "page_size",
+            "label": "Page Size",
+            "type": "INT",
+            "mandatory": false,
+            "description": "The maximum number of results to return",
+            "defaultValue": 10
         }
     ]
 } 
